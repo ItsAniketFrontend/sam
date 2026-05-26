@@ -1643,10 +1643,18 @@ footer{
   .nav-links li{padding:10px 0;border-bottom:1px solid rgba(200,149,42,0.08)}
   .nav-links li:last-child{border-bottom:none}
   .hero-inner{grid-template-columns:1fr;padding:110px 28px 60px;gap:48px}
-  .hero-right{display:flex;padding:0;justify-content:center;order:2}
+  .hero-right{display:flex;flex-direction:column;align-items:center;padding:0;order:2}
   .hero-portrait-img{width:100%;max-width:320px;height:auto;aspect-ratio:17/24;border-radius:18px}
-  .hero-right .hero-badges{display:none !important}
   .hero-right .phone-frame{display:none !important}
+  .hero-right .hero-badges{
+    position:static !important;bottom:auto !important;right:auto !important;
+    display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:8px;
+    width:100%;max-width:320px;margin-top:18px;
+  }
+  .hero-right .badge{min-width:0;padding:10px 12px;flex:1 1 calc(33.333% - 6px);animation:none;opacity:1}
+  .hero-right .badge-icon{font-size:16px}
+  .hero-right .badge-text .bv{font-size:12px;line-height:1.15}
+  .hero-right .badge-text .bk{font-size:8.5px;margin-top:2px}
   .section{padding:72px 28px}
   #about{grid-template-columns:1fr;gap:48px}
   .about-photo-col{display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -1920,7 +1928,7 @@ footer{
 
 <!-- NAV -->
 <nav id="site-nav">
-  <div class="nav-brand"><a href="about.html">Samriddhi Tiwari</a></div>
+  <div class="nav-brand">Samriddhi Tiwari</div>
   <ul class="nav-links">
     <li><a href="#about-wrap">About</a></li>
     <li><a href="#career-wrap">Career</a></li>
